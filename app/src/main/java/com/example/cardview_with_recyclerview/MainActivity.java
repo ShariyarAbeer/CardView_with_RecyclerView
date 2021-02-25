@@ -1,10 +1,12 @@
 package com.example.cardview_with_recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.widget.LinearLayout;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
+
+       /*
+
+        ********##By this two line of code recyclerView can be gridview
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2, LinearLayoutManager.VERTICAL,false);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+*/
 
 
 
