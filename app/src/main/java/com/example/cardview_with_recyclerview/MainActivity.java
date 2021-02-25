@@ -1,6 +1,7 @@
 package com.example.cardview_with_recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         readMe = getResources().getStringArray(R.array.readme);
 
         MyAdapter myAdapter = new MyAdapter(MainActivity.this,name,readMe,images);
+
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
 
 
 
