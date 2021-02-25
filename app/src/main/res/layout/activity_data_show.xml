@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DataShow"
+    android:layout_margin="10dp"
+
+    >
+
+
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+
+
+        >
+
+        <ImageView
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height= "60dp"
+            android:id="@+id/ImagePass"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello Pass data name"
+            android:id="@+id/namePass"
+            android:layout_below="@+id/ImagePass"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello pass readme"
+            android:id="@+id/readmePass"
+            android:layout_below="@+id/namePass"
+            android:layout_centerHorizontal="true"
+            android:textSize="15dp"
+
+            />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</RelativeLayout>

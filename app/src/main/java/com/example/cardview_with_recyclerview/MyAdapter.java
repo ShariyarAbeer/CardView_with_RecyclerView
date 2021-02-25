@@ -1,10 +1,13 @@
 package com.example.cardview_with_recyclerview;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -43,6 +46,16 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyviewHolder> {
         holder.nameView.setText(nameData[position]);
         holder.readmeView.setText(readmeData[position]);
         holder.imageView.setImageResource(imagesData[position]);
+        holder.mainLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DataShow.class);
+                intent.putExtra("namepass",nameData[position]);
+                intent.putExtra("realmepass",readmeData[position]);
+                intent.putExtra("imagepass",imagesData[position]);
+                context.startActivity(intent);
+            }
+        });
 
     }
 
@@ -55,6 +68,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyviewHolder> {
 
         TextView nameView, readmeView;
         ImageView imageView;
+        LinearLayout mainLayout;
 
 
 
@@ -63,6 +77,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyviewHolder> {
             nameView = itemView.findViewById(R.id.nameView);
             readmeView = itemView.findViewById(R.id.readmeView);
             imageView = itemView.findViewById(R.id.image);
+            mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }
 }
